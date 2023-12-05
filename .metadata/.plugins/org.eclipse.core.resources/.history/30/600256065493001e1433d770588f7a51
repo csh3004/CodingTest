@@ -1,30 +1,33 @@
 package greedy;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class N1541 {
 
 	public static void main(String[] args) throws IOException {
-		int ans = Integer.MAX_VALUE;
+		
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		String input = bf.readLine();
 		StringTokenizer minus = new StringTokenizer(input,"-");
 		while(minus.hasMoreTokens()){
 			int temp = 0;
-			StringTokenizer plus = new StringTokenizer(minus.nextToken(), "+");
 			
+			StringTokenizer plus = new StringTokenizer(minus.nextToken(), "+");
 			while(plus.hasMoreElements()) {
 				temp = temp + Integer.parseInt(plus.nextToken());
 			}
-			if(ans == Integer.MAX_VALUE) {
-				ans = temp;
-			} else {
-				ans = ans - temp;
-			}
+	
 		}
-		System.out.print(ans);
+		bw.write(temp);
+		bw.flush();
+		bw.close();
+		
 	}
+
 }
