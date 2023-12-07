@@ -57,3 +57,4 @@ replay_pid*
 .metadata/version.ini
 .metadata/.plugins/org.eclipse.core.resources/.projects/.org.eclipse.egit.core.cmp/.syncinfo.snap
 .metadata/.plugins/org.eclipse.core.resources/.projects/CodingTest/.syncinfo.snap
+*.png
